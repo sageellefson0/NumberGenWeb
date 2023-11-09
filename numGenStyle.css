@@ -19,8 +19,7 @@ body, html{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #007991;
-    text-shadow: 3px 3px 2px #C1292E;
+    color: #ECECE9;
     background-color: #333232;
     border: solid 2px #ECECE9;
     padding: 25px;
@@ -28,12 +27,34 @@ body, html{
 
 .fadeIn { 
     -webkit-animation: fadeIn 5s;
-    animation: fadeIn 5s; }
+    animation: fadeIn 3s; }
 
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
+
+  #buttonDiv{
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    left: 50%;
+}
+
+#generateButton{
+    background-color: #007991;
+    padding: 20px;
+    border: solid 2px #ECECE9;
+    color: #ECECE9;
+    background-color: #333232;
+    font-size: 18px;
+}
+
+#generateButton:hover, #welcomeText:hover{
+    border: solid 2px #C1292E;
+    transition: .4s ease-in-out;
+}
 
 .text, #generateButton{
     font-family: Verdana, Geneva, sans-serif;
@@ -50,19 +71,11 @@ body, html{
 /* BOXEs */
 #inputBoxes{
     display: inline-block;
+    justify-content: center;
 }
 
 .slots{
     width: 90px;
+    margin-left: 35px;
 }
 
-#buttonDiv{
-    text-align: center;
-}
-
-#generateButton{
-    background-color: #007991;
-    padding: 20px;
-    border: solid 2px #C1292E;
-    color:#ECECE9;
-}
