@@ -5,30 +5,32 @@
     <title>Digit Disorder</title>
 
     <link rel="stylesheet" href="numGenStyle.css">
+    <script src="numGenScript.js"></script>
 
 </head>
 <body style="background-color:#ECECE9">
 
     <div id="welcomeDiv"></div>
         <div id="welcomeDivText">
-    <h1 class="text" id="welcomeText"> Welcome to Digit Disorder </h1>
+    <h1 class="text" id="welcomeText"> Welcome to <span class="fadeIn">Digit Disorder</span></h1>
 </div>
-
-    <div style="width: 600px; height: 400px;">
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
-            <button id="generateButton" style="margin: 10px;">Generate Start Number</button>
-            <input type="text" id="slot1" placeholder="1000">
-            <input type="text" id="slot2" placeholder="1000">
-            <input type="text" id="slot3" placeholder="1000">
-            <input type="text" id="slot4" placeholder="1000">
-            <input type="text" id="slot5" placeholder="1000">
-            <input type="text" id="slot6" placeholder="1000">
-            <input type="text" id="slot7" placeholder="1000">
-            <input type="text" id="slot8" placeholder="1000">
-            <input type="text" id="slot9" placeholder="1000">
-            <input type="text" id="slot10" placeholder="1000">
+    
+<div id="buttonDiv">
+<button id="generateButton" style="margin: 10px;">Generate Start Number</button>
+</div>
+        <div id="inputBoxes">
+            <input type="text" class="slots" id="slot1" placeholder="1">
+            <input type="text" class="slots" id="slot2" placeholder="1000">
+            <input type="text" class="slots" id="slot3" placeholder="1000">
+            <input type="text" class="slots" id="slot4" placeholder="1000">
+            <input type="text" class="slots" id="slot5" placeholder="1000">
+            <input type="text" class="slots" id="slot6" placeholder="1000">
+            <input type="text" class="slots" id="slot7" placeholder="1000">
+            <input type="text" class="slots" id="slot8" placeholder="1000">
+            <input type="text" class="slots" id="slot9" placeholder="1000">
+            <input type="text" class="slots" id="slot10" placeholder="1000">
             <div id="randomNumberField" style="font-size: 16px;"></div>
-            <button id="button1" disabled>1</button>
+           <!-- <button id="button1" disabled>1</button>
             <button id="button2" disabled>2</button>
             <button id="button3" disabled>3</button>
             <button id="button4" disabled>4</button>
@@ -37,12 +39,9 @@
             <button id="button7" disabled>7</button>
             <button id="button8" disabled>8</button>
             <button id="button9" disabled>9</button>
-            <button id="button10" disabled>10</button>
-            <div id="messageText" style="text-align: center;"></div>
+            <button id="button10" disabled>10</button> -->
             <button id="restartButton">Restart</button>
             <button id="exitButton">Exit</button>
-        </div>
     </div>
-    <script src="yourJavaScriptFile.js"></script>
 </body>
 </html>

@@ -1,24 +1,41 @@
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    
+    overflow-x: hidden;
 }
 
 body, html{
     margin: 0px;
     padding: 0px;
     height:auto;
-    overflow-x: hidden;
+}
+
+#welcomeDivText{
+    background-color: #C1292E;
 }
 
 #welcomeText{
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     text-align: center;
+    color: #007991;
+    text-shadow: 3px 3px 2px #C1292E;
+    background-color: #333232;
+    border: solid 2px #ECECE9;
+    padding: 25px;
 }
 
-.text{
+.fadeIn { 
+    -webkit-animation: fadeIn 5s;
+    animation: fadeIn 5s; }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.text, #generateButton{
     font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -27,4 +44,25 @@ body, html{
     width: 100%;
     height: 600px;
     filter: blur(4px);
+}
+
+
+/* BOXEs */
+#inputBoxes{
+    display: inline-block;
+}
+
+.slots{
+    width: 90px;
+}
+
+#buttonDiv{
+    text-align: center;
+}
+
+#generateButton{
+    background-color: #007991;
+    padding: 20px;
+    border: solid 2px #C1292E;
+    color:#ECECE9;
 }
