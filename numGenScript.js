@@ -32,6 +32,10 @@
           }
         }
       }
+
+      function setSlot(){
+        
+      }
       
   };
 
