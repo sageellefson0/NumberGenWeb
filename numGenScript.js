@@ -17,7 +17,7 @@
 
     function generateRandomNumber() {
         if (numList.length >= 1000) {
-          randomNumberField.innerText = "You have run out of original numbers! Please close and reopen the application.";
+          numberPlaceholder.innerText = "You have run out of original numbers! Please close and reopen the application.";
         } else {
           const rand = Math.floor(Math.random() * 1000) + 1;
           let newRandomNumber;
@@ -26,7 +26,7 @@
           } while (numList.includes(newRandomNumber));
       
           randomNumber = newRandomNumber;
-          randomNumberField.innerText = String(randomNumber);
+          numberPlaceholder.innerText = String(randomNumber);
           if (isInNumericalOrderIgnoreZeros(numList)) {
             console.log("List is in order, ignoring 0s.");
           }
