@@ -10,7 +10,9 @@
   
     // Handle the click event for the generateButton
     const generateButton = document.getElementById("generateButton");
-    generateButton.addEventListener("click", generateRandomNumber);
+    generateButton.addEventListener("click", function () {
+      generateRandomNumber();
+      generateButton.disabled = true; });
   
     // Initial random number placeholder
 
