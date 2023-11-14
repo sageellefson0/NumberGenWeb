@@ -13,7 +13,6 @@
     generateButton.addEventListener("click", generateRandomNumber);
   
     // Initial random number placeholder
-    setRandomNumberPlaceholder();
 
     function generateRandomNumber() {
         if (numList.length >= 1000) {
@@ -27,17 +26,26 @@
       
           randomNumber = newRandomNumber;
           numberPlaceholder.innerText = String(randomNumber);
-          if (isInNumericalOrderIgnoreZeros(numList)) {
-            console.log("List is in order, ignoring 0s.");
-          }
+          'if (isInNumericalOrderIgnoreZeros(numList)) '
+            'console.log("List is in order, ignoring 0s.")';
+          ''
+          console.log("Setting slot1:", numberPlaceholder.innerText);
         }
       }
 
-      function setSlot(){
-        
-      }
+      const slot1 = document.getElementById("slot1");
+      slot1.addEventListener("click", setSlot1);
+
+      function setSlot1() {
+          console.log("Setting slot1:", numberPlaceholder.innerText);
+          slot1.innerText = numberPlaceholder.innerText;        }
+
+
+
+
+    }
       
-  };
+
 
   
   
