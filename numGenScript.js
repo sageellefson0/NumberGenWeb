@@ -63,13 +63,8 @@ window.onload = function () {
     generateRandomNumber();
     numList.splice(0,1,slot1.innerText)
     console.log(numList);
-    if (isInNumericalOrderIgnoreZeros(numList)) {
-      console.log("List is in order, ignoring 0s.");
-    }
-    else{
-      numberPlaceholder.innerText = String("You have lost.");
-      disableSlots();
-    }
+    orderCheck();
+
 
   }
 
@@ -81,13 +76,8 @@ window.onload = function () {
     generateRandomNumber();
     numList.splice(1,1,slot2.innerText)
     console.log(numList);
-    if (isInNumericalOrderIgnoreZeros(numList)) {
-      console.log("List is in order, ignoring 0s.");
-    }
-    else{
-      numberPlaceholder.innerText = String("You have lost.");
-      disableSlots();
-    }
+    orderCheck();
+
   }
 
   slot3.addEventListener("click", setSlot3);
@@ -98,13 +88,8 @@ window.onload = function () {
     generateRandomNumber();
     numList.splice(2,1,slot3.innerText)
     console.log(numList);
-    if (isInNumericalOrderIgnoreZeros(numList)) {
-      console.log("List is in order, ignoring 0s.");
-    }
-    else{
-      numberPlaceholder.innerText = String("You have lost.");
-      disableSlots();
-    }
+    orderCheck();
+
   }
 
   slot4.addEventListener("click", setSlot4);
@@ -115,13 +100,8 @@ window.onload = function () {
     generateRandomNumber();
     numList.splice(3,1,slot4.innerText)
     console.log(numList);
-    if (isInNumericalOrderIgnoreZeros(numList)) {
-      console.log("List is in order, ignoring 0s.");
-    }
-    else{
-      numberPlaceholder.innerText = String("You have lost.");
-      disableSlots();
-    }
+    orderCheck();
+
   }
 
   slot5.addEventListener("click", setSlot5);
@@ -131,13 +111,7 @@ window.onload = function () {
     generateRandomNumber();
     numList.splice(4,1,slot5.innerText)
     console.log(numList);
-    if (isInNumericalOrderIgnoreZeros(numList)) {
-      console.log("List is in order, ignoring 0s.");
-    }
-    else{
-      numberPlaceholder.innerText = String("You have lost.");
-      disableSlots();
-    }
+    orderCheck();
   }
 
 
@@ -157,6 +131,16 @@ window.onload = function () {
     }
     
     return true;
+  }
+
+  function orderCheck(){
+    if (isInNumericalOrderIgnoreZeros(numList)) {
+      console.log("List is in order, ignoring 0s.");
+    }
+    else{
+      numberPlaceholder.innerText = String("You have lost.");
+      disableSlots();
+    }
   }
   
   

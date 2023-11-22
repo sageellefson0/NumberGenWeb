@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <title>Digit Disorder</title>
@@ -8,20 +9,22 @@
     <script src="numGenScript.js"></script>
 
 </head>
+
 <body style="background-color:#ECECE9">
 
     <div id="welcomeDiv"></div>
-        <div id="welcomeDivText">
-    <h1 class="text" id="welcomeText"> Welcome to <span class="fadeIn">Digit Disorder</span></h1>
-</div>
-    
-<div id="buttonDiv">
-<button id="generateButton" style="margin: 10px;">Generate Start Number</button>
+    <div id="welcomeDivText">
+        <h1 class="text" id="welcomeText"> Welcome to <span class="fadeIn">Digit Disorder</span></h1>
+    </div>
 
-</div>
-<div id="numberPlaceholderDiv">
-    <span id="numberPlaceholder"></span>
-</div>
+    <div id="buttonDiv">
+        <button id="generateButton" style="margin: 10px;">Generate Start Number</button>
+
+    </div>
+    <div class="playDiv">
+        <div id="numberPlaceholderDiv">
+            <span id="numberPlaceholder"> &nbsp; </span>
+        </div>
         <div id="inputBoxes">
             <button class="slots" id="slot1">1</button>
             <button class="slots" id="slot2">2</button>
@@ -37,17 +40,16 @@
             <br>
             <br>
             <div id="randomNumberField" style="font-size: 16px;"></div>
-           <!-- <button id="button1" disabled>1</button>
-            <button id="button2" disabled>2</button>
-            <button id="button3" disabled>3</button>
-            <button id="button4" disabled>4</button>
-            <button id="button5" disabled>5</button>
-            <button id="button6" disabled>6</button>
-            <button id="button7" disabled>7</button>
-            <button id="button8" disabled>8</button>
-            <button id="button9" disabled>9</button>
-            <button id="button10" disabled>10</button> -->
+            <div class="stats">
+                <p class="statsText"> Wins:</p>
+                <p class="statsText"> Losses:</p>
+            </div>
             <button id="restartButton">Restart</button>
+
+        </div>
     </div>
+
+
 </body>
+
 </html>
