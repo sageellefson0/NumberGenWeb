@@ -68,7 +68,7 @@ body, html{
     transition: .4s ease-in-out;
 }
 
-.text, #generateButton, #numberPlaceholder, #restartButton, .statsText{
+.text, #generateButton, #numberPlaceholder, #restartButton, #statsTextWin, #statsTextLoss{
     font-family: Verdana, Geneva, sans-serif;
 }
 

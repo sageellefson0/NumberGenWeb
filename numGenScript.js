@@ -88,6 +88,7 @@ function enableAllSlots() {
   
       // Check if the new number can fit into the list
       randomNumber = newRandomNumber;
+      
       numberPlaceholder.innerText = String(randomNumber);
     }
   }
@@ -178,6 +179,11 @@ function enableAllSlots() {
     }
     else{
       numberPlaceholder.innerText = String("You have lost.");
+      let lossVar = 0;
+      lossVar++;
+      let statsTextLoss = document.getElementById("statsTextLoss");
+      statsTextLoss.innerText = ("Total Losses: " + lossVar );
+
       disableSlots();
     }
   }
