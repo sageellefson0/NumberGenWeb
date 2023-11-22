@@ -8,23 +8,14 @@ window.onload = function () {
 
 
   const slot1 = document.getElementById("slot1");
-
   const slot2 = document.getElementById("slot2");
-
   const slot3 = document.getElementById("slot3");
-
   const slot4 = document.getElementById("slot4");
-
   const slot5 = document.getElementById("slot5");
-
   const slot6 = document.getElementById("slot6");
-
   const slot7 = document.getElementById("slot7");
-
   const slot8 = document.getElementById("slot8");
-
   const slot9 = document.getElementById("slot9");
-
   const slot10 = document.getElementById("slot10");
 
 
@@ -35,8 +26,56 @@ window.onload = function () {
     generateButton.disabled = true;
   });
 
-  // Initial random number placeholder
+    // Handle the click event for the restartButton
+    const restartButton = document.getElementById("restartButton");
+    restartButton.addEventListener("click", function () {
+      restartButtonOperation();
+    });
 
+    // restartButton function
+    // ...
+
+// restartButton function
+function restartButtonOperation() {
+  numberPlaceholder.innerHTML = "&nbsp;";
+    numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
+
+  // Reset the text content of each slot
+  slot1.innerText = "1";
+  slot2.innerText = "2";
+  slot3.innerText = "3";
+  slot4.innerText = "4";
+  slot5.innerText = "5";
+  slot6.innerText = "6";
+  slot7.innerText = "7";
+  slot8.innerText = "8";
+  slot9.innerText = "9";
+  slot10.innerText = "10";
+
+  // Enable all slots
+  enableAllSlots();
+
+  generateButton.disabled = false;
+}
+
+function enableAllSlots() {
+  slot1.disabled = false;
+  slot2.disabled = false;
+  slot3.disabled = false;
+  slot4.disabled = false;
+  slot5.disabled = false;
+  slot6.disabled = false;
+  slot7.disabled = false;
+  slot8.disabled = false;
+  slot9.disabled = false;
+  slot10.disabled = false;
+}
+
+// ...
+
+
+    
+  // generateRandomNumber function 
   function generateRandomNumber() {
     if (numList.length >= 1000) {
       numberPlaceholder.innerText = "You have run out of original numbers! Please close and reopen the application.";
