@@ -51,6 +51,8 @@ body, html{
     background-color: #333232;
     color:#ECECE9;
     padding: 0 20px 0 20px;
+    border: solid 2px #ECECE9;
+    width: 80px;
 }
 
 

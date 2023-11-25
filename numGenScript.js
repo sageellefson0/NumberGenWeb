@@ -235,7 +235,7 @@ function enableAllSlots() {
       numberPlaceholder.innerText = String("You have lost.");
       lossVar++;
       let statsTextLoss = document.getElementById("statsTextLoss");
-      statsTextLoss.innerText = ("Total Losses: " + lossVar );
+      statsTextLoss.innerText = ("Losses: " + lossVar );
 
       disableSlots();
     }
