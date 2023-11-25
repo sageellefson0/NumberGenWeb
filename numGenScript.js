@@ -5,6 +5,8 @@ window.onload = function () {
 
   let numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
   let randomNumber;
+  let lossVar = 0;
+
 
 
   const slot1 = document.getElementById("slot1");
@@ -154,6 +156,58 @@ function enableAllSlots() {
     orderCheck();
   }
 
+  slot6.addEventListener("click", setSlot6);
+  function setSlot6() {
+    slot6.innerText = numberPlaceholder.innerText;
+    slot6.disabled = true;
+    generateRandomNumber();
+    numList.splice(5,1,slot6.innerText)
+    console.log(numList);
+    orderCheck();
+  }
+
+  slot7.addEventListener("click", setSlot7);
+  function setSlot7() {
+    slot7.innerText = numberPlaceholder.innerText;
+    slot7.disabled = true;
+    generateRandomNumber();
+    numList.splice(6,1,slot7.innerText)
+    console.log(numList);
+    orderCheck();
+  }
+
+
+  slot8.addEventListener("click", setSlot8);
+  function setSlot8() {
+    slot8.innerText = numberPlaceholder.innerText;
+    slot8.disabled = true;
+    generateRandomNumber();
+    numList.splice(7,1,slot8.innerText)
+    console.log(numList);
+    orderCheck();
+  }
+
+  slot9.addEventListener("click", setSlot9);
+  function setSlot9() {
+    slot9.innerText = numberPlaceholder.innerText;
+    slot9.disabled = true;
+    generateRandomNumber();
+    numList.splice(8,1,slot9.innerText)
+    console.log(numList);
+    orderCheck();
+  }
+
+
+  slot10.addEventListener("click", setSlot10);
+  function setSlot10() {
+    slot10.innerText = numberPlaceholder.innerText;
+    slot10.disabled = true;
+    generateRandomNumber();
+    numList.splice(9,1,slot10.innerText)
+    console.log(numList);
+    orderCheck();
+  }
+
 
   function isInNumericalOrderIgnoreZeros(list) {
     // Filter out the zeros
@@ -179,7 +233,6 @@ function enableAllSlots() {
     }
     else{
       numberPlaceholder.innerText = String("You have lost.");
-      let lossVar = 0;
       lossVar++;
       let statsTextLoss = document.getElementById("statsTextLoss");
       statsTextLoss.innerText = ("Total Losses: " + lossVar );
