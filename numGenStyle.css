@@ -38,8 +38,21 @@ body, html{
     position: absolute;
     text-align: center;
     transform: translate(-50%, -50%);
-    top: 50%;
+    top: 65%;
     left: 50%;
+}
+
+#howToPlayDiv{
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    top: 49%;
+    left: 50%;
+    background-color: #333232;
+    padding: 0 20px 0 20px;
+    border: solid 2px #ECECE9;
+    color:#ECECE9;
+
 }
 
 .stats{
@@ -47,7 +60,7 @@ body, html{
     text-align: center;
     transform: translate(-50%, -50%);
     top: 65%;
-    left: 50%;
+    left: 6%;
     background-color: #333232;
     color:#ECECE9;
     padding: 0 20px 0 20px;
@@ -70,7 +83,7 @@ body, html{
     transition: .4s ease-in-out;
 }
 
-.text, #generateButton, #numberPlaceholder, #restartButton, #statsTextWin, #statsTextLoss{
+.text, #generateButton, #numberPlaceholder, #restartButton, #statsTextWin, #statsTextLoss, #howToPlay{
     font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -79,7 +92,7 @@ body, html{
     color:#ECECE9;
     padding: 10px;
     background-color: #333232;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 
 }
 
@@ -100,13 +113,17 @@ body, html{
     justify-content: center;
 }
 
+
 .slots{
     width: 70px;
     border: solid 2px #333232;
     background-color: #ECECE9;
     padding:10px;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
 }
+
 
 #inputBoxes{
     width: 100%;
@@ -128,7 +145,7 @@ body, html{
 }
 
 .playDiv{
-margin-left: 20px;
+justify-content: center;
 }
 
 

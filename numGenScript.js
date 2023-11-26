@@ -9,6 +9,8 @@ window.onload = function () {
 
 
 
+
+
   const slot1 = document.getElementById("slot1");
   const slot2 = document.getElementById("slot2");
   const slot3 = document.getElementById("slot3");
@@ -73,8 +75,6 @@ function enableAllSlots() {
   slot10.disabled = false;
 }
 
-// ...
-
 
     
   // generateRandomNumber function 
@@ -92,6 +92,7 @@ function enableAllSlots() {
       randomNumber = newRandomNumber;
       
       numberPlaceholder.innerText = String(randomNumber);
+      enableAllSlots();
     }
   }
   
