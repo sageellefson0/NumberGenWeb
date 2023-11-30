@@ -22,16 +22,8 @@ window.onload = function () {
   const slot9 = document.getElementById("slot9");
   const slot10 = document.getElementById("slot10");
 
-  slot1.disabled = true;
-  slot2.disabled = true;
-  slot3.disabled = true;
-  slot4.disabled = true;
-  slot5.disabled = true;
-  slot6.disabled = true;
-  slot7.disabled = true;
-  slot8.disabled = true;
-  slot9.disabled = true;
-  slot10.disabled = true;
+  // sets the slots to disabled on load - doesnt enable until generate start number is clicked
+  disableAllSlots();
 
 
   // Handle the click event for the generateButton
@@ -69,8 +61,8 @@ function restartButtonOperation() {
   slot9.innerText = "";
   slot10.innerText = "";
 
-  // Enable all slots
-  enableAllSlots();
+  // disable all slots on load, will enable when generate button is clicked
+  disableAllSlots();
 
   generateButton.disabled = false;
 }
@@ -87,6 +79,20 @@ function enableAllSlots() {
   slot9.disabled = false;
   slot10.disabled = false;
 }
+
+function disableAllSlots() {
+  slot1.disabled = true;
+  slot2.disabled = true;
+  slot3.disabled = true;
+  slot4.disabled = true;
+  slot5.disabled = true;
+  slot6.disabled = true;
+  slot7.disabled = true;
+  slot8.disabled = true;
+  slot9.disabled = true;
+  slot10.disabled = true;
+}
+
 
 
     
@@ -250,24 +256,15 @@ function enableAllSlots() {
       let statsTextLoss = document.getElementById("statsTextLoss");
       statsTextLoss.innerText = ("Losses: " + lossVar );
 
-      disableSlots();
+      disableButtons();
     }
   }
   
   
   
 
-  function disableSlots(){
-    slot1.disabled = true;
-    slot2.disabled = true;
-    slot3.disabled = true;
-    slot4.disabled = true;
-    slot5.disabled = true;
-    slot6.disabled = true;
-    slot7.disabled = true;
-    slot8.disabled = true;
-    slot9.disabled = true;
-    slot10.disabled = true;
+  function disableButtons(){
+    disableAllSlots
     generateButton.disabled = true;
   }
 
