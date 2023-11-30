@@ -8,9 +8,6 @@ window.onload = function () {
   let lossVar = 0;
 
 
-
-
-
   const slot1 = document.getElementById("slot1");
   const slot2 = document.getElementById("slot2");
   const slot3 = document.getElementById("slot3");
@@ -107,11 +104,12 @@ function disableAllSlots() {
         newRandomNumber = Math.floor(Math.random() * 1000) + 1;
       } while (numList.includes(newRandomNumber));
   
-      // Check if the new number can fit into the list
       randomNumber = newRandomNumber;
       
       numberPlaceholder.innerText = String(randomNumber);
     }
+    //TODO 
+    // ADD CHECK HERE FOR DUPLICATES - CURRENTLY Allowing duplicates in the 10 digit array - needs to be corrected to compare.
   }
   
 
@@ -260,8 +258,6 @@ function disableAllSlots() {
     }
   }
   
-  
-  
 
   function disableButtons(){
     disableAllSlots
@@ -270,8 +266,3 @@ function disableAllSlots() {
 
 
 }
-
-
-
-
-

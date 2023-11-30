@@ -38,7 +38,7 @@ body, html{
     position: absolute;
     text-align: center;
     transform: translate(-50%, -50%);
-    top: 50%;
+    top: 58%;
     left: 50%;
 }
 
@@ -47,7 +47,7 @@ body, html{
     text-align: center;
     justify-content: center;
     transform: translate(-50%, -50%);
-    top:  65%;
+    top:  46%;
     left: 50%;
     color:#333232;
     width: 100px;
@@ -64,17 +64,23 @@ body, html{
 
 }
 
-.stats{
-    position: absolute;
+.stats {
     text-align: center;
-    transform: translate(-50%, -50%);
-    top: 80%;
-    left: 6%;
-    background-color: #333232;
-    color:#ECECE9;
-    padding: 0 20px 0 20px;
-    width: 80px;
+    color: #ECECE9;
+    width: 180px;
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
 }
+
+#statsTextWin,
+#statsTextLoss {
+    display: inline-block;
+    margin: 0 5px;
+}
+
 
 
 #generateButton{
@@ -99,7 +105,7 @@ body, html{
     color:#ECECE9;
     padding: 10px;
     background-color: #333232;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: 2px #ECECE9 solid;
 
 
@@ -146,7 +152,7 @@ button:disabled{
     text-align: center;
     justify-content: center;
     transform: translate(-50%, -50%);
-    top:  85%;
+    top:  80%;
     left: 50%;
     
 
