@@ -45,16 +45,17 @@ function restartButtonOperation() {
     numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
 
   // Reset the text content of each slot
-  slot1.innerText = "1";
-  slot2.innerText = "2";
-  slot3.innerText = "3";
-  slot4.innerText = "4";
-  slot5.innerText = "5";
-  slot6.innerText = "6";
-  slot7.innerText = "7";
-  slot8.innerText = "8";
-  slot9.innerText = "9";
-  slot10.innerText = "10";
+
+  slot1.innerText = "";
+  slot2.innerText = "";
+  slot3.innerText = "";
+  slot4.innerText = "";
+  slot5.innerText = "";
+  slot6.innerText = "";
+  slot7.innerText = "";
+  slot8.innerText = "";
+  slot9.innerText = "";
+  slot10.innerText = "";
 
   // Enable all slots
   enableAllSlots();
@@ -92,7 +93,6 @@ function enableAllSlots() {
       randomNumber = newRandomNumber;
       
       numberPlaceholder.innerText = String(randomNumber);
-      enableAllSlots();
     }
   }
   
@@ -111,6 +111,7 @@ function enableAllSlots() {
 
   }
 
+ 
   slot2.addEventListener("click", setSlot2);
 
   function setSlot2() {

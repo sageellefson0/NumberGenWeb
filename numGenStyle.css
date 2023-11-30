@@ -6,7 +6,7 @@ html{
 body, html{
     margin: 0px;
     padding: 0px;
-    height:auto;
+    height: auto;
 }
 
 #welcomeDivText{
@@ -15,7 +15,7 @@ body, html{
 
 #welcomeText{
     position: absolute;
-    top: 28%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -38,20 +38,29 @@ body, html{
     position: absolute;
     text-align: center;
     transform: translate(-50%, -50%);
-    top: 65%;
+    top: 50%;
     left: 50%;
 }
 
 #howToPlayDiv{
     position: absolute;
     text-align: center;
+    justify-content: center;
     transform: translate(-50%, -50%);
-    top: 49%;
+    top:  65%;
     left: 50%;
+    color:#333232;
+    width: 100px;
+    height: 20px;
+}
+
+#howToPlay{
+    color: #ECECE9;
     background-color: #333232;
-    padding: 0 20px 0 20px;
-    border: solid 2px #ECECE9;
-    color:#ECECE9;
+    border: none;    
+    border: 2px #ECECE9 solid;
+    padding: 4px;
+    
 
 }
 
@@ -59,12 +68,11 @@ body, html{
     position: absolute;
     text-align: center;
     transform: translate(-50%, -50%);
-    top: 65%;
+    top: 80%;
     left: 6%;
     background-color: #333232;
     color:#ECECE9;
     padding: 0 20px 0 20px;
-    border: solid 2px #ECECE9;
     width: 80px;
 }
 
@@ -78,21 +86,22 @@ body, html{
     font-size: 18px;
 }
 
-#generateButton:hover, #welcomeText:hover, .slots:hover, #restartButton:hover{
+#generateButton:hover, #welcomeText:hover, .slots:hover, #restartButton:hover, #howToPlay:hover{
     border: solid 2px #C1292E;
     transition: .4s ease-in-out;
 }
 
-.text, #generateButton, #numberPlaceholder, #restartButton, #statsTextWin, #statsTextLoss, #howToPlay{
+.text, #generateButton, #numberPlaceholder, #restartButton, #statsTextWin, #statsTextLoss, #howToPlay, .slotsNum{
     font-family: Verdana, Geneva, sans-serif;
 }
 
 #restartButton{
-    border: solid 2px #ECECE9;
     color:#ECECE9;
     padding: 10px;
     background-color: #333232;
     margin-bottom: 10px;
+    border: 2px #ECECE9 solid;
+
 
 }
 
@@ -101,51 +110,57 @@ body, html{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 500px;
-    border-bottom: solid 5px #C1292E;
-    margin-bottom: 10px;
-}
-
-
-/* BOXEs */
-#inputBoxes{
-    display: inline-block;
-    justify-content: center;
+    height: 662px;
 }
 
 
 .slots{
     width: 70px;
+    height: 36px;
     border: solid 2px #333232;
     background-color: #ECECE9;
-    padding:10px;
+    padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+button:disabled{
+    color:#525151;
+    }
+
+.slotsNum{
+    display: inline-block;
+    width: 50px;
+    padding: 0 10px 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #ECECE9;
 
 }
 
 
 #inputBoxes{
+    display: inline-block;
     width: 100%;
+    position: absolute;
     text-align: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    top:  85%;
+    left: 50%;
     
 
 }
 
 #numberPlaceholderDiv{
     text-align: center;
-    padding: 10px;
-
 
 }
 
 #numberPlaceholder{
     font-size: 20px;
+    color: #ECECE9;
 
-}
-
-.playDiv{
-justify-content: center;
 }
 
 
