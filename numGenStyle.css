@@ -131,7 +131,7 @@ button:disabled{
 .slotsNum{
     display: inline-block;
     width: 50px;
-    padding: 0 10px 10px 10px;
+    padding: 0 10px 0 10px;
     margin-left: 10px;
     margin-right: 10px;
     color: #ECECE9;

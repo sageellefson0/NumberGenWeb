@@ -22,12 +22,24 @@ window.onload = function () {
   const slot9 = document.getElementById("slot9");
   const slot10 = document.getElementById("slot10");
 
+  slot1.disabled = true;
+  slot2.disabled = true;
+  slot3.disabled = true;
+  slot4.disabled = true;
+  slot5.disabled = true;
+  slot6.disabled = true;
+  slot7.disabled = true;
+  slot8.disabled = true;
+  slot9.disabled = true;
+  slot10.disabled = true;
+
 
   // Handle the click event for the generateButton
   const generateButton = document.getElementById("generateButton");
   generateButton.addEventListener("click", function () {
     generateRandomNumber();
     generateButton.disabled = true;
+    enableAllSlots();
   });
 
     // Handle the click event for the restartButton
@@ -107,7 +119,6 @@ function enableAllSlots() {
     numList.splice(0,1,slot1.innerText)
     console.log(numList);
     orderCheck();
-
 
   }
 
