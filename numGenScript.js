@@ -6,6 +6,7 @@ window.onload = function () {
   let numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
   let randomNumber;
   let lossVar = 0;
+  let holdingList = []; 
 
 
   const slot1 = document.getElementById("slot1");
@@ -98,19 +99,33 @@ function disableAllSlots() {
     if (numList.length >= 1000) {
       numberPlaceholder.innerText = "You have run out of original numbers! Please close and reopen the application.";
     } else {
-      const rand = Math.floor(Math.random() * 1000) + 1;
       let newRandomNumber;
       do {
-        newRandomNumber = Math.floor(Math.random() * 1000) + 1;
+        newRandomNumber = Math.floor(Math.random() * 10) + 1;
       } while (numList.includes(newRandomNumber));
   
-      randomNumber = newRandomNumber;
-      
-      numberPlaceholder.innerText = String(randomNumber);
+
+      if (holdingList.includes(newRandomNumber)){
+      console.log("Duplicate number, rerunning function");
+      generateRandomNumber();
     }
+
+    else{
+      randomNumber = newRandomNumber;
+      holdingList.push(randomNumber);
+      console.log(holdingList);
+    }
+
+ 
+      randomNumber = newRandomNumber;
+      numberPlaceholder.innerText = String(randomNumber);
+
+    
+  }
     //TODO 
     // ADD CHECK HERE FOR DUPLICATES - CURRENTLY Allowing duplicates in the 10 digit array - needs to be corrected to compare.
   }
+
   
 
 
@@ -244,23 +259,27 @@ function disableAllSlots() {
     return true;
   }
 
-  function orderCheck(){
+  function orderCheck() {
     if (isInNumericalOrderIgnoreZeros(numList)) {
-      console.log("List is in order, ignoring 0s.");
-    }
-    else{
-      numberPlaceholder.innerText = String("You have lost.");
-      lossVar++;
-      let statsTextLoss = document.getElementById("statsTextLoss");
-      statsTextLoss.innerText = ("Losses: " + lossVar );
+        console.log("List is in order, ignoring 0s.");
+    } else {
+        if (numList.every(item => item !== "0")) {
+            numberPlaceholder.innerText = "You have won!";
+        } else {
+            numberPlaceholder.innerText = "You have lost.";
+            lossVar++;
+            let statsTextLoss = document.getElementById("statsTextLoss");
+            statsTextLoss.innerText = "Losses: " + lossVar;
 
-      disableButtons();
+            disableButtons();
+        }
     }
-  }
+}
+
   
 
   function disableButtons(){
-    disableAllSlots
+    disableAllSlots();
     generateButton.disabled = true;
   }
 
