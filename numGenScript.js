@@ -96,13 +96,8 @@ function disableAllSlots() {
     
   // generateRandomNumber function 
   function generateRandomNumber() {
-    if (numList.length >= 1000) {
-      numberPlaceholder.innerText = "You have run out of original numbers! Please close and reopen the application.";
-    } else {
       let newRandomNumber;
-      do {
-        newRandomNumber = Math.floor(Math.random() * 10) + 1;
-      } while (numList.includes(newRandomNumber));
+      newRandomNumber = Math.floor(Math.random() * 10) + 1;
   
 
       if (holdingList.includes(newRandomNumber)){
@@ -121,7 +116,6 @@ function disableAllSlots() {
       numberPlaceholder.innerText = String(randomNumber);
 
     
-  }
     //TODO 
     // ADD CHECK HERE FOR DUPLICATES - CURRENTLY Allowing duplicates in the 10 digit array - needs to be corrected to compare.
   }
