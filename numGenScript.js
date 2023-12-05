@@ -2,11 +2,18 @@
 window.onload = function () {
   let slotElements = document.querySelectorAll(".slots");
   let numberPlaceholder = document.getElementById("numberPlaceholder");
+  let restartButton = document.getElementById("restartButton");
+
 
   let numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
   let randomNumber;
   let lossVar = 0;
+  let winVar = 0;
   let holdingList = []; 
+
+  restartButton.disabled = true;
+
+  
 
 
   const slot1 = document.getElementById("slot1");
@@ -23,19 +30,35 @@ window.onload = function () {
   // sets the slots to disabled on load - doesnt enable until generate start number is clicked
   disableAllSlots();
 
+  // restart button disabled on launch as it tracks ls
+
 
   // Handle the click event for the generateButton
   const generateButton = document.getElementById("generateButton");
   generateButton.addEventListener("click", function () {
     generateRandomNumber();
     generateButton.disabled = true;
+    restartButton.disabled = false;
     enableAllSlots();
   });
 
     // Handle the click event for the restartButton
-    const restartButton = document.getElementById("restartButton");
     restartButton.addEventListener("click", function () {
+
+      if (numberPlaceholder.innerText === "You have won!")
+      {
+        restartButton.disabled = true;
+      }
+      else{
+      lossVar++;
+      let statsTextLoss = document.getElementById("statsTextLoss");
+      statsTextLoss.innerText = "Losses: " + lossVar;
+      restartButton.disabled = true;
+      }
+
       restartButtonOperation();
+
+
     });
 
     // restartButton function
@@ -45,6 +68,9 @@ window.onload = function () {
 function restartButtonOperation() {
   numberPlaceholder.innerHTML = "&nbsp;";
     numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
+
+    holdingList = []; 
+
 
   // Reset the text content of each slot
 
@@ -89,6 +115,7 @@ function disableAllSlots() {
   slot8.disabled = true;
   slot9.disabled = true;
   slot10.disabled = true;
+
 }
 
 
@@ -96,8 +123,13 @@ function disableAllSlots() {
     
   // generateRandomNumber function 
   function generateRandomNumber() {
-      let newRandomNumber;
-      newRandomNumber = Math.floor(Math.random() * 10) + 1;
+
+    if (holdingList.length === 10) {
+      console.log("Holding list is full. No more numbers will be generated.");
+      return;
+  }
+
+      let newRandomNumber = Math.floor(Math.random() * 10) + 1;
   
 
       if (holdingList.includes(newRandomNumber)){
@@ -109,11 +141,9 @@ function disableAllSlots() {
       randomNumber = newRandomNumber;
       holdingList.push(randomNumber);
       console.log(holdingList);
-    }
-
- 
-      randomNumber = newRandomNumber;
       numberPlaceholder.innerText = String(randomNumber);
+
+    }
 
     
     //TODO 
@@ -256,17 +286,18 @@ function disableAllSlots() {
   function orderCheck() {
     if (isInNumericalOrderIgnoreZeros(numList)) {
         console.log("List is in order, ignoring 0s.");
-    } else {
+
         if (numList.every(item => item !== "0")) {
             numberPlaceholder.innerText = "You have won!";
-        } else {
+            winVar++;
+            statsTextWin.innerText = "Wins: " + winVar;
+
+        } 
+    } else {
             numberPlaceholder.innerText = "You have lost.";
-            lossVar++;
-            let statsTextLoss = document.getElementById("statsTextLoss");
-            statsTextLoss.innerText = "Losses: " + lossVar;
 
             disableButtons();
-        }
+        
     }
 }
 
