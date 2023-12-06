@@ -42,16 +42,16 @@ body, html{
     left: 50%;
 }
 
-#howToPlayDiv{
+#howToPlay{
     position: absolute;
     text-align: center;
     justify-content: center;
     transform: translate(-50%, -50%);
-    top:  46%;
+    top:  47%;
     left: 50%;
     color:#333232;
     width: 100px;
-    height: 20px;
+    height: 30px;
 }
 
 #howToPlay{
@@ -92,12 +92,12 @@ body, html{
     font-size: 18px;
 }
 
-#generateButton:hover, #welcomeText:hover, .slots:hover, #restartButton:hover, #howToPlay:hover{
+#generateButton:hover, #welcomeText:hover, .slots:hover, #restartButton:hover, #howToPlay:hover, #closePopUpBtn:hover{
     border: solid 2px #C1292E;
     transition: .4s ease-in-out;
 }
 
-.text, #generateButton, #numberPlaceholder, #restartButton, #statsTextWin, #statsTextLoss, #howToPlay, .slotsNum{
+.text, #generateButton, #numberPlaceholder, #restartButton, #statsTextWin, #statsTextLoss, #howToPlay, .slotsNum, #howToPlayPopUp{
     font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -171,6 +171,28 @@ button:disabled{
 button:hover {
     cursor: pointer;
   }
+
+#howToPlayPopUp{
+    color: #ECECE9;
+    background-color: #333232;
+    display: none;
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    /*text-align: center; */
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    top:  60%;
+    left: 50%;
+}
+
+#closePopUpBtn{
+    color:#ECECE9;
+    padding: 10px;
+    background-color: #333232;
+    margin-bottom: 20px;
+    border: 2px #ECECE9 solid;
+}
 
 
 

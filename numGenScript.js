@@ -1,8 +1,11 @@
 
 window.onload = function () {
-  let slotElements = document.querySelectorAll(".slots");
   let numberPlaceholder = document.getElementById("numberPlaceholder");
   let restartButton = document.getElementById("restartButton");
+
+  let howToPlay = document.getElementById("howToPlay");
+  let howToPlayPopUp = document.getElementById("howToPlayPopUp");
+  
 
 
   let numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
@@ -12,7 +15,6 @@ window.onload = function () {
   let holdingList = []; 
 
   restartButton.disabled = true;
-
   
 
 
@@ -149,6 +151,13 @@ function disableAllSlots() {
     //TODO 
     // ADD CHECK HERE FOR DUPLICATES - CURRENTLY Allowing duplicates in the 10 digit array - needs to be corrected to compare.
   }
+
+  howToPlay.addEventListener("click", openPopUp);
+
+  function openPopUp(){
+    howToPlayPopUp.style.display="block";
+  }
+
 
   
 
