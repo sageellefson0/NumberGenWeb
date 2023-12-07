@@ -176,10 +176,9 @@ button:hover {
     color: #ECECE9;
     background-color: #333232;
     display: none;
-    width: 500px;
-    height: 200px;
+    width: 550px;
+    height: 400px;
     position: absolute;
-    text-align: center;
     justify-content: center;
     transform: translate(-50%, -50%);
     top:  60%;
@@ -194,7 +193,17 @@ button:hover {
     background-color: #333232;
     margin-bottom: 20px;
     border: 2px #ECECE9 solid;
-}
+    text-align: center;
+
+   }
+
+   .howToPlayText{
+    padding: 0px 15px 0px 15px;
+   }
+
+   #howToPlayPopUpEndMessage{
+    text-align: center;
+   }
 
 
 
