@@ -174,14 +174,15 @@ button:hover {
 
 #howToPlayPopUp{
     color: #ECECE9;
-    background-color: #333232;
+    background-color: rgba(51,50,50, .8);
+    backdrop-filter: blur(7px);
     display: none;
     width: 550px;
     height: 400px;
     position: absolute;
     justify-content: center;
     transform: translate(-50%, -50%);
-    top:  60%;
+    top:  55%;
     left: 50%;
     border-radius: 10px;
     box-shadow: 0 6px 10px 0 rgba(236,236,233, 0.4), 0 8px 22px 0 rgba(0,121,145, 0.4);
