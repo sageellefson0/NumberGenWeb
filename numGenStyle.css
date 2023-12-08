@@ -185,25 +185,28 @@ button:hover {
     left: 50%;
     border-radius: 10px;
     box-shadow: 0 6px 10px 0 rgba(236,236,233, 0.4), 0 8px 22px 0 rgba(0,121,145, 0.4);
+    text-align: center;
+
 }
 
 #closePopUpBtn{
     color:#ECECE9;
-    padding: 10px;
+    padding: 10px 20px 10px 20px;
     background-color: #333232;
     margin-bottom: 20px;
     border: 2px #ECECE9 solid;
-    text-align: center;
+    text-align: center; 
 
    }
 
    .howToPlayText{
     padding: 0px 15px 0px 15px;
+    text-align: left;
    }
 
-   #howToPlayPopUpEndMessage{
-    text-align: center;
-   }
 
+
+
+   
 
 

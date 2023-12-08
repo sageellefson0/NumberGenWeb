@@ -5,7 +5,7 @@ window.onload = function () {
 
   let howToPlay = document.getElementById("howToPlay");
   let howToPlayPopUp = document.getElementById("howToPlayPopUp");
-  
+  let closePopUpBtn = document.getElementById("closePopUpBtn");
 
 
   let numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
@@ -43,6 +43,12 @@ window.onload = function () {
     restartButton.disabled = false;
     enableAllSlots();
   });
+
+  closePopUpBtn.addEventListener("click", function () {
+    howToPlayPopUp.style.display="none";
+
+  });
+
 
     // Handle the click event for the restartButton
     restartButton.addEventListener("click", function () {
@@ -131,7 +137,7 @@ function disableAllSlots() {
       return;
   }
 
-      let newRandomNumber = Math.floor(Math.random() * 10) + 1;
+      let newRandomNumber = Math.floor(Math.random() * 1000) + 1;
   
 
       if (holdingList.includes(newRandomNumber)){
