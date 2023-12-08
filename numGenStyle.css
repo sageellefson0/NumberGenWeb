@@ -15,7 +15,7 @@ body, html{
 
 #welcomeText{
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -38,7 +38,7 @@ body, html{
     position: absolute;
     text-align: center;
     transform: translate(-50%, -50%);
-    top: 58%;
+    top: 53%;
     left: 50%;
 }
 
@@ -47,7 +47,7 @@ body, html{
     text-align: center;
     justify-content: center;
     transform: translate(-50%, -50%);
-    top:  47%;
+    top:  42%;
     left: 50%;
     color:#333232;
     width: 100px;
@@ -152,7 +152,7 @@ button:disabled{
     text-align: center;
     justify-content: center;
     transform: translate(-50%, -50%);
-    top:  80%;
+    top:  75%;
     left: 50%;
     
 

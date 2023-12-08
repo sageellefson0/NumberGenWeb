@@ -1,5 +1,6 @@
 
 window.onload = function () {
+  let slots = document.getElementsByClassName("slots");
   let numberPlaceholder = document.getElementById("numberPlaceholder");
   let restartButton = document.getElementById("restartButton");
 
@@ -69,8 +70,7 @@ window.onload = function () {
 
     });
 
-    // restartButton function
-    // ...
+
 
 // restartButton function
 function restartButtonOperation() {
@@ -93,6 +93,9 @@ function restartButtonOperation() {
   slot9.innerText = "";
   slot10.innerText = "";
 
+  for (let i = 0; i < slots.length; i++) {
+    slots[i].style.border = "solid 2px #333232";
+}
   // disable all slots on load, will enable when generate button is clicked
   disableAllSlots();
 
@@ -173,6 +176,7 @@ function disableAllSlots() {
   function setSlot1() {
     slot1.innerText = numberPlaceholder.innerText;
     slot1.disabled = true;
+    slot1.style.border="solid 2px #007991";
     generateRandomNumber();
     numList.splice(0,1,slot1.innerText)
     console.log(numList);
@@ -186,6 +190,7 @@ function disableAllSlots() {
   function setSlot2() {
     slot2.innerText = numberPlaceholder.innerText;
     slot2.disabled = true;
+    slot2.style.border="solid 2px #007991";
     generateRandomNumber();
     numList.splice(1,1,slot2.innerText)
     console.log(numList);
@@ -198,6 +203,7 @@ function disableAllSlots() {
   function setSlot3() {
     slot3.innerText = numberPlaceholder.innerText;
     slot3.disabled = true;
+    slot3.style.border="solid 2px #007991";
     generateRandomNumber();
     numList.splice(2,1,slot3.innerText)
     console.log(numList);
@@ -210,6 +216,7 @@ function disableAllSlots() {
   function setSlot4() {
     slot4.innerText = numberPlaceholder.innerText;
     slot4.disabled = true;
+    slot4.style.border="solid 2px #007991";
     generateRandomNumber();
     numList.splice(3,1,slot4.innerText)
     console.log(numList);
@@ -221,6 +228,7 @@ function disableAllSlots() {
   function setSlot5() {
     slot5.innerText = numberPlaceholder.innerText;
     slot5.disabled = true;
+    slot5.style.border="solid 2px #007991";
     generateRandomNumber();
     numList.splice(4,1,slot5.innerText)
     console.log(numList);
@@ -231,6 +239,7 @@ function disableAllSlots() {
   function setSlot6() {
     slot6.innerText = numberPlaceholder.innerText;
     slot6.disabled = true;
+    slot6.style.border="solid 2px #007991";
     generateRandomNumber();
     numList.splice(5,1,slot6.innerText)
     console.log(numList);
@@ -240,7 +249,8 @@ function disableAllSlots() {
   slot7.addEventListener("click", setSlot7);
   function setSlot7() {
     slot7.innerText = numberPlaceholder.innerText;
-    slot7.disabled = true;
+    slot7.disabled = true;  
+    slot7.style.border="solid 2px #007991";
     generateRandomNumber();
     numList.splice(6,1,slot7.innerText)
     console.log(numList);
@@ -252,6 +262,7 @@ function disableAllSlots() {
   function setSlot8() {
     slot8.innerText = numberPlaceholder.innerText;
     slot8.disabled = true;
+    slot8.style.border="solid 2px #007991";
     generateRandomNumber();
     numList.splice(7,1,slot8.innerText)
     console.log(numList);
@@ -262,6 +273,7 @@ function disableAllSlots() {
   function setSlot9() {
     slot9.innerText = numberPlaceholder.innerText;
     slot9.disabled = true;
+    slot9.style.border="solid 2px #007991";
     generateRandomNumber();
     numList.splice(8,1,slot9.innerText)
     console.log(numList);
@@ -273,6 +285,7 @@ function disableAllSlots() {
   function setSlot10() {
     slot10.innerText = numberPlaceholder.innerText;
     slot10.disabled = true;
+    slot10.style.border="solid 2px #007991";
     generateRandomNumber();
     numList.splice(9,1,slot10.innerText)
     console.log(numList);
