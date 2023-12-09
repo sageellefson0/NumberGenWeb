@@ -73,9 +73,31 @@
             tally.
             <h5 id="howToPlayPopUpEndMessage">Good luck and happy playing! </h5>
             <br>
+            
         </h5>
 
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+        </canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0, 0);
+            ctx.lineTo(200, 100);
+            ctx.stroke();
+            </script>
+
         <button id="closePopUpBtn"> Play! </button>
+
+    </div>
+    <div class="celebration">
+        <div class="happyManDiv">
+        <img id="happyManImg" src="/Users/sagecole0/Desktop/NumberGenWeb/images/happyMan.png" alt="Stick figure of a happy man.">
+        </div>
+        
+        <div class="sadManDiv">
+        <img id="sadManImg" src="/Users/sagecole0/Desktop/NumberGenWeb/images/sadMan.png" alt="Stick figure of a sad man.">
+    </div>
 
     </div>
 

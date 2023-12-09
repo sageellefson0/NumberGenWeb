@@ -1,3 +1,4 @@
+import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 
 window.onload = function () {
   let slots = document.getElementsByClassName("slots");
@@ -47,6 +48,7 @@ window.onload = function () {
 
   closePopUpBtn.addEventListener("click", function () {
     howToPlayPopUp.style.display="none";
+    confetti();
 
   });
 
