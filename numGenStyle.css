@@ -207,19 +207,27 @@ button:hover {
    }
 
    .celebration{
-    display: none;
    }
 
-   .happyManDiv, .sadManDiv{
+   .happyManDivLeft{
     position: absolute;
     transform: translate(-50%, -50%);
     top:  40%;
     left: 20%;
-    opacity: 0; /* Initially set to invisible */
+    opacity: 1; 
 
    }
 
-   #happyManImg, #sadManImg{
+   .happyManDivRight{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:  40%;
+    left: 80%;
+    opacity: 1; 
+
+   }
+
+   #happyManImg{
     width: 150px;
     height:300px;
    }
@@ -233,16 +241,28 @@ button:hover {
     }
 }
 
-   .happyManDiv {
-    animation: flashAnimation 2s infinite; /* Adjust the duration as needed */
+.buffDogeDiv{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:  30%;
+    left: 50%;
+    opacity: 1; 
 }
+#buffDogeImg{
+    width: 200px;
+    height:300px;
+}
+/*
+   .happyManDivRight, .happyManDivLeft {
+    animation: flashAnimation 2s infinite; /* Adjust the duration as needed 
+   }*/
 
 
-.sadManDiv {
-    animation: flashAnimation 2s  infinite; /* Adjust the duration as needed */
+/*.sadManDiv {
+    animation: flashAnimation 2s  infinite; /* Adjust the duration as needed 
     animation-delay: 1s;
+    */
 
 
-}
 
 

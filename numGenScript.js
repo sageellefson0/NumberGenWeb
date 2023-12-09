@@ -18,6 +18,7 @@ window.onload = function () {
 
   restartButton.disabled = true;
   
+  
 
 
   const slot1 = document.getElementById("slot1");
@@ -338,5 +339,7 @@ function disableAllSlots() {
     generateButton.disabled = true;
   }
 
+
+  
 
 }
