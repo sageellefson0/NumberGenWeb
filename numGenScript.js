@@ -39,22 +39,40 @@ window.onload = function () {
     });
 
     radio10Slots.addEventListener('change', function () {
-        if (radio10Slots.checked) {
-
+      if (radio10Slots.checked) {
           numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
-          slot6.style.display = "initial";
-          slot7.style.display = "initial";
-          slot8.style.display = "initial";
-          slot9.style.display = "initial";
-          slot10.style.display = "initial";
-    
-          slotsNum6.style.display = "inline-block";
-          slotsNum7.style.display = "inline-block";
-          slotsNum8.style.display = "inline-block";
-          slotsNum9.style.display = "inline-block";
-          slotsNum10.style.display = "inline-block";
-        }
-    });
+  
+          // Check if the screen width is less than or equal to 768 pixels (mobile)
+          if (window.innerWidth <= 768) {
+            slotsNum6.style.display = "none";
+            slotsNum7.style.display = "none";
+            slotsNum8.style.display = "none";
+            slotsNum9.style.display = "none";
+            slotsNum10.style.display = "none";     
+            
+            slot6.style.display = "initial";
+            slot7.style.display = "initial";
+            slot8.style.display = "initial";
+            slot9.style.display = "initial";
+            slot10.style.display = "initial";
+
+          } else {
+              // If not on mobile, show slots 6-10
+              slot6.style.display = "initial";
+              slot7.style.display = "initial";
+              slot8.style.display = "initial";
+              slot9.style.display = "initial";
+              slot10.style.display = "initial";
+  
+              slotsNum6.style.display = "inline-block";
+              slotsNum7.style.display = "inline-block";
+              slotsNum8.style.display = "inline-block";
+              slotsNum9.style.display = "inline-block";
+              slotsNum10.style.display = "inline-block";
+          }
+      }
+  });
+  
 
     function hideExtraSlotsAndNums() {
       slot6.style.display = "none";

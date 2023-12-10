@@ -353,5 +353,13 @@ canvas {
     .slotsNum{
         display: none;
     }
-}
 
+    .slots {
+        width: 50px; /* Adjusted width for mobile */
+        margin-left: 5px; /* Adjusted margin for mobile */
+        margin-right: 5px; /* Adjusted margin for mobile */
+        margin-bottom: 5px;
+    }
+
+
+}
