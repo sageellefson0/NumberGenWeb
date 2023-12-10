@@ -15,7 +15,7 @@ body, html{
 
 #welcomeText{
     position: absolute;
-    top: 25%;
+    top: 23%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -47,7 +47,7 @@ body, html{
     text-align: center;
     justify-content: center;
     transform: translate(-50%, -50%);
-    top:  42%;
+    top:  38%;
     left: 50%;
     color:#333232;
     width: 100px;
@@ -160,13 +160,12 @@ button:disabled{
 }
 
 .radioButtons{
-    display: inline-block;
     width: 100%;
     position: absolute;
     text-align: center;
     justify-content: center;
     transform: translate(-50%, -50%);
-    top:  64%;
+    top: 44%;
     left: 50%;
     color:#ECECE9;
 

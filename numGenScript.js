@@ -13,14 +13,65 @@ window.onload = function () {
   let closePopUpBtn = document.getElementById("closePopUpBtn");
 
 
-  let numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
+  let numList = [];
   let randomNumber;
   let lossVar = 0;
   let winVar = 0;
   let holdingList = []; 
 
+
+  let slotsNum6 = document.getElementById("slotsNum6");
+  let slotsNum7 = document.getElementById("slotsNum7");
+  let slotsNum8 = document.getElementById("slotsNum8");
+  let slotsNum9 = document.getElementById("slotsNum9");
+  let slotsNum10 = document.getElementById("slotsNum10");
+
+
+
+  const radio5Slots = document.getElementById('5slots');
+  const radio10Slots = document.getElementById('10slots');
+
+    radio5Slots.addEventListener('change', function () {
+        if (radio5Slots.checked) {
+            numList = ["0", "0", "0", "0", "0"];
+            hideExtraSlotsAndNums();
+        }
+    });
+
+    radio10Slots.addEventListener('change', function () {
+        if (radio10Slots.checked) {
+
+          numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
+          slot6.style.display = "initial";
+          slot7.style.display = "initial";
+          slot8.style.display = "initial";
+          slot9.style.display = "initial";
+          slot10.style.display = "initial";
+    
+          slotsNum6.style.display = "inline-block";
+          slotsNum7.style.display = "inline-block";
+          slotsNum8.style.display = "inline-block";
+          slotsNum9.style.display = "inline-block";
+          slotsNum10.style.display = "inline-block";
+        }
+    });
+
+    function hideExtraSlotsAndNums() {
+      slot6.style.display = "none";
+      slot7.style.display = "none";
+      slot8.style.display = "none";
+      slot9.style.display = "none";
+      slot10.style.display = "none";
+
+      slotsNum6.style.display = "none";
+      slotsNum7.style.display = "none";
+      slotsNum8.style.display = "none";
+      slotsNum9.style.display = "none";
+      slotsNum10.style.display = "none";
+
+  }
+
   restartButton.disabled = true;
-  
   
 
 
@@ -48,7 +99,7 @@ window.onload = function () {
     generateButton.disabled = true;
     restartButton.disabled = false;
     enableAllSlots();
-    celebration.style.display="block";   
+  
 
 
   });
