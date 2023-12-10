@@ -1,7 +1,10 @@
 
 
 window.onload = function () {
+  confetti();
+
   let slots = document.getElementsByClassName("slots");
+  let celebration = document.getElementsByClassName("celebration")[0];
   let numberPlaceholder = document.getElementById("numberPlaceholder");
   let restartButton = document.getElementById("restartButton");
 
@@ -45,8 +48,10 @@ window.onload = function () {
     generateButton.disabled = true;
     restartButton.disabled = false;
     enableAllSlots();
-    confetti();
+    celebration.style.display="block";   
     canvas.style.display="block";
+
+
 
   });
 
@@ -69,6 +74,11 @@ window.onload = function () {
       let statsTextLoss = document.getElementById("statsTextLoss");
       statsTextLoss.innerText = "Losses: " + lossVar;
       restartButton.disabled = true;
+      celebration.style.display="none";
+      canvas.style.display="none";
+
+
+
       }
 
       restartButtonOperation();
