@@ -352,7 +352,7 @@ function disableAllSlots() {
   }
 
 
-
+// Credit to Smeegs for this design, which was shared here: https://jsfiddle.net/Javalsu/vxP5q/743/
   function confetti(){
     //canvas init
     var canvas = document.getElementById("canvas");
