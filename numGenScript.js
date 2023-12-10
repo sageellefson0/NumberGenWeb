@@ -49,8 +49,6 @@ window.onload = function () {
     restartButton.disabled = false;
     enableAllSlots();
     celebration.style.display="block";   
-    canvas.style.display="block";
-
 
 
   });
@@ -76,9 +74,6 @@ window.onload = function () {
       restartButton.disabled = true;
       celebration.style.display="none";
       canvas.style.display="none";
-
-
-
       }
 
       restartButtonOperation();
@@ -156,12 +151,13 @@ function disableAllSlots() {
       return;
   }
 
-      let newRandomNumber = Math.floor(Math.random() * 1000) + 1;
+      let newRandomNumber = Math.floor(Math.random() * 10) + 1;
   
 
       if (holdingList.includes(newRandomNumber)){
       console.log("Duplicate number, rerunning function");
       generateRandomNumber();
+
     }
 
     else{
@@ -336,6 +332,8 @@ function disableAllSlots() {
             numberPlaceholder.innerText = "You have won!";
             winVar++;
             statsTextWin.innerText = "Wins: " + winVar;
+            celebration.style.display="block";   
+            canvas.style.display="block";
 
         } 
     } else {

@@ -117,7 +117,7 @@ body, html{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 662px;
+    height: 100vh; 
 }
 
 
@@ -253,23 +253,24 @@ button:hover {
 .buffDogeDiv{
     position: absolute;
     transform: translate(-50%, -50%);
-    top:  30%;
+    top:  90%;
     left: 50%;
     opacity: 1; 
     animation: slideInAnimation 1s forwards; 
 
 }
 #buffDogeImg{
-    width: 200px;
-    height:300px;
+    width: 350px;
+    height:450px;
 }
+
 
 @keyframes slideInAnimation {
     0% {
         top: -300px; /* Move the image above the screen */
     }
     100% {
-        top: 30%; /* Move the image to the desired position */
+        top: 40%; /* Move the image to the desired position */
     }
 }
 
