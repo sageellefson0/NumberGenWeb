@@ -298,3 +298,60 @@ canvas {
     height: 100%;
     pointer-events: none; 
 }
+
+
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    #welcomeText {
+        padding: 20px;   
+        font-size:x-large; 
+    }
+
+    #buttonDiv {
+        top: 52%; /* Adjust button position */
+        padding: 25px 15px 25px 15px;   
+        margin: 0; 
+    }
+
+    #generateButton{
+        padding: 15px;   
+        font-size: 15px;
+        width: 200px;
+    }
+
+    #howToPlay {
+        top: 38%; /* Adjust howToPlay button position */
+    }
+
+    .stats {
+        top: 94%; /* Adjust stats position */
+    }
+
+    #inputBoxes {
+        top: 78%; /* Adjust inputBoxes position */
+    }
+
+    .radioButtons {
+        top: 43%; /* Adjust radioButtons position */
+    }
+
+    #howToPlayPopUp {
+        width: 90%; /* Adjusted for better mobile display */
+        max-width: 90%; /* Set a max-width for larger screens */
+        top: 50%; /* Adjust howToPlayPopUp position */
+    }
+    
+    .buffDogeDiv {
+        top: 80%; /* Adjust buffDogeDiv position */
+    }
+
+    canvas {
+        display: none; /* Hide canvas on smaller screens */
+    }
+
+    .slotsNum{
+        display: none;
+    }
+}
+
