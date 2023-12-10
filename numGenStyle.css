@@ -107,6 +107,7 @@ body, html{
     background-color: #333232;
     margin-bottom: 20px;
     border: 2px #ECECE9 solid;
+    z-index: 10;
 
 
 }
@@ -206,8 +207,7 @@ button:hover {
     text-align: left;
    }
 
-   .celebration{
-   }
+
 
    .happyManDivLeft{
     position: absolute;
@@ -234,12 +234,17 @@ button:hover {
 
    @keyframes flashAnimation {
     0%, 100% {
-        opacity: 0;
+        height:300px;
     }
     50% {
-        opacity: 1;
+        height:310px;
+
     }
 }
+
+.happyManDivRight, .happyManDivLeft {
+    animation: flashAnimation 1s infinite; 
+   }
 
 .buffDogeDiv{
     position: absolute;
@@ -247,22 +252,33 @@ button:hover {
     top:  30%;
     left: 50%;
     opacity: 1; 
+    animation: slideInAnimation 1s forwards; 
+
 }
 #buffDogeImg{
     width: 200px;
     height:300px;
 }
-/*
-   .happyManDivRight, .happyManDivLeft {
-    animation: flashAnimation 2s infinite; /* Adjust the duration as needed 
-   }*/
+
+@keyframes slideInAnimation {
+    0% {
+        top: -300px; /* Move the image above the screen */
+    }
+    100% {
+        top: 30%; /* Move the image to the desired position */
+    }
+}
 
 
-/*.sadManDiv {
-    animation: flashAnimation 2s  infinite; /* Adjust the duration as needed 
-    animation-delay: 1s;
-    */
 
 
-
-
+canvas {
+    display: block;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top:  50%;
+    left: 50%;  
+    height: 100%;
+    pointer-events: none; 
+    display: none;
+}
