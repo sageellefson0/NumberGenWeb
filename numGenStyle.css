@@ -97,7 +97,7 @@ body, html{
     transition: .4s ease-in-out;
 }
 
-.text, #generateButton, #numberPlaceholder, #restartButton, #statsTextWin, #statsTextLoss, #howToPlay, .slotsNum, #howToPlayPopUp{
+.text, #generateButton, #numberPlaceholder, #restartButton, #statsTextWin, #statsTextLoss, #howToPlay, .slotsNum, #howToPlayPopUp, .radioButtons{
     font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -156,6 +156,19 @@ button:disabled{
     top:  75%;
     left: 50%;
     
+
+}
+
+.radioButtons{
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    top:  64%;
+    left: 50%;
+    color:#ECECE9;
 
 }
 
@@ -285,5 +298,4 @@ canvas {
     left: 50%;  
     height: 100%;
     pointer-events: none; 
-
 }

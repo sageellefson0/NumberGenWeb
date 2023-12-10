@@ -22,6 +22,15 @@
 
     </div>
 
+    <div class="radioButtons">
+        <form>
+    <input type="radio" id="5slots" name="slotsGroup" value="5slots">
+    <label for="5slots">5 Slots</label><br>
+    <input type="radio" id="10slots" name="slotsGroup" value="10slots">
+    <label for="10slots">10 Slots</label><br>
+</form>
+</div>
+
 
     <div id="inputBoxes">
         <div id="numberPlaceholderDiv">
@@ -76,16 +85,7 @@
             
         </h5>
 
-        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
-        </canvas>
-
-        <script>
-            var c = document.getElementById("myCanvas");
-            var ctx = c.getContext("2d");
-            ctx.moveTo(0, 0);
-            ctx.lineTo(200, 100);
-            ctx.stroke();
-            </script>
+       
 
         <button id="closePopUpBtn"> Play! </button>
 
