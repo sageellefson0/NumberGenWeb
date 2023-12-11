@@ -393,6 +393,10 @@ function disableAllSlots() {
     return true;
   }
 
+
+  let happyManDivRight = document.getElementsByClassName("happyManDivRight")[0];
+  let happyManDivLeft = document.getElementsByClassName("happyManDivLeft")[0];
+
   function orderCheck() {
     if (isInNumericalOrderIgnoreZeros(numList)) {
         console.log("List is in order, ignoring 0s.");
@@ -404,6 +408,13 @@ function disableAllSlots() {
             celebration.style.display="block";   
             canvas.style.display="block";
 
+            if (window.innerWidth <= 768) {
+              happyManDivRight.style.display="none";
+              happyManDivLeft.style.display="none";
+              canvas.style.display="block";
+            }
+
+          
         } 
     } else {
             numberPlaceholder.innerText = "You have lost.";
