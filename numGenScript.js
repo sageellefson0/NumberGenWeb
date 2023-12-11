@@ -156,6 +156,14 @@ window.onload = function () {
 function restartButtonOperation() {
   numberPlaceholder.innerHTML = "&nbsp;";
     numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
+    
+    if (radio5Slots.checked) {
+      numList = ["0", "0", "0", "0", "0"];
+      hideExtraSlotsAndNums();
+  } 
+  else if (radio10Slots.checked) {
+      numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
+  }
 
     holdingList = []; 
 
