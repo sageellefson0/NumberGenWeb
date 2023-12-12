@@ -13,6 +13,15 @@ window.onload = function () {
   let closePopUpBtn = document.getElementById("closePopUpBtn");
 
 
+  let happyManDivRight = document.getElementsByClassName("happyManDivRight")[0];
+  let happyManDivLeft = document.getElementsByClassName("happyManDivLeft")[0];
+  let buffDogeDiv = document.getElementsByClassName("buffDogeDiv")[0];
+
+  let inputBoxes = document.getElementById("inputBoxes");
+
+
+
+
   let numList = [];
   let randomNumber;
   let lossVar = 0;
@@ -33,6 +42,19 @@ window.onload = function () {
   const radio10Slots = document.getElementById('10slots');
 
 
+  const slot1 = document.getElementById("slot1");
+  const slot2 = document.getElementById("slot2");
+  const slot3 = document.getElementById("slot3");
+  const slot4 = document.getElementById("slot4");
+  const slot5 = document.getElementById("slot5");
+  const slot6 = document.getElementById("slot6");
+  const slot7 = document.getElementById("slot7");
+  const slot8 = document.getElementById("slot8");
+  const slot9 = document.getElementById("slot9");
+  const slot10 = document.getElementById("slot10");
+
+  const generateButton = document.getElementById("generateButton");
+
 
 
     radio5Slots.addEventListener('change', function () {
@@ -41,6 +63,8 @@ window.onload = function () {
             hideExtraSlotsAndNums();
 
             restartButtonOperation()
+
+            inputBoxes.style.top="72%";
         }
     });
 
@@ -48,6 +72,7 @@ window.onload = function () {
     radio10Slots.addEventListener('change', function () {
       if (radio10Slots.checked) {
           numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
+          inputBoxes.style.top="75%";
   
           // Check if the screen width is less than or equal to 768 pixels (mobile)
           if (window.innerWidth <= 768) {
@@ -107,17 +132,6 @@ window.onload = function () {
   
 
 
-  const slot1 = document.getElementById("slot1");
-  const slot2 = document.getElementById("slot2");
-  const slot3 = document.getElementById("slot3");
-  const slot4 = document.getElementById("slot4");
-  const slot5 = document.getElementById("slot5");
-  const slot6 = document.getElementById("slot6");
-  const slot7 = document.getElementById("slot7");
-  const slot8 = document.getElementById("slot8");
-  const slot9 = document.getElementById("slot9");
-  const slot10 = document.getElementById("slot10");
-
   // sets the slots to disabled on load - doesnt enable until generate start number is clicked
   disableAllSlots();
 
@@ -125,7 +139,7 @@ window.onload = function () {
 
 
   // Handle the click event for the generateButton
-  const generateButton = document.getElementById("generateButton");
+
   generateButton.addEventListener("click", function () {
     generateRandomNumber();
     generateButton.disabled = true;
@@ -427,10 +441,6 @@ function disableAllSlots() {
     return true;
   }
 
-
-  let happyManDivRight = document.getElementsByClassName("happyManDivRight")[0];
-  let happyManDivLeft = document.getElementsByClassName("happyManDivLeft")[0];
-  let buffDogeDiv = document.getElementsByClassName("buffDogeDiv")[0];
 
 
 

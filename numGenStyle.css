@@ -165,16 +165,13 @@ button:disabled{
 
 }
 
-#numberPlaceholderDiv{
-    text-align: center;
-
-}
-
 #numberPlaceholder{
     font-size: 20px;
     color: #ECECE9;
-
+    text-align: center;
 }
+
+
 button:hover {
     cursor: pointer;
   }
@@ -305,7 +302,6 @@ canvas {
 
     #buttonDiv {
         top: 52%; /* Adjust button position */
-        padding: 25px 15px 25px 15px;   
         margin: 0; 
     }
 
@@ -313,6 +309,7 @@ canvas {
         padding: 15px;   
         font-size: 15px;
         width: 200px;
+        margin: 0;
     }
 
     #howToPlay {
@@ -324,7 +321,7 @@ canvas {
     }
 
     #inputBoxes {
-        top: 78%; /* Adjust inputBoxes position */
+        top: 75%; /* Adjust inputBoxes position */
     }
 
     .radioButtons {
