@@ -40,6 +40,8 @@ window.onload = function () {
         }
     });
 
+    radio10Slots.dispatchEvent(new Event('change'));
+
     radio10Slots.addEventListener('change', function () {
       if (radio10Slots.checked) {
           numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
@@ -76,6 +78,7 @@ window.onload = function () {
           restartButtonOperation()
       }
   });
+
   
 
     function hideExtraSlotsAndNums() {
@@ -150,6 +153,10 @@ window.onload = function () {
       }
 
       restartButtonOperation();
+
+      celebration.style.display="none";
+      canvas.style.display="none";
+
 
 
     });
@@ -226,10 +233,19 @@ function disableAllSlots() {
   // generateRandomNumber function 
   function generateRandomNumber() {
 
-    if (holdingList.length === 10) {
+    if (radio5Slots.checked) {
+
+    if (holdingList.length === 5) {
       console.log("Holding list is full. No more numbers will be generated.");
       return;
   }
+} else if (radio10Slots.checked) {
+  if (holdingList.length === 10) {
+    console.log("Holding list is full. No more numbers will be generated.");
+    return;
+}
+
+}
 
       let newRandomNumber = Math.floor(Math.random() * 1000) + 1;
   
@@ -551,8 +567,6 @@ function disableAllSlots() {
         }
     }
 
-
-    
     //animation loop
     setInterval(draw, 20);
 
