@@ -49,25 +49,19 @@ body, html{
     transform: translate(-50%, -50%);
     top:  38%;
     left: 50%;
-    color:#333232;
+    background-color: #333232;
+    color: #ECECE9;
+    border: 2px #ECECE9 solid;
     width: 100px;
     height: 30px;
-}
-
-#howToPlay{
-    color: #ECECE9;
-    background-color: #333232;
-    border: none;    
-    border: 2px #ECECE9 solid;
     padding: 4px;
-    
 
 }
 
 .stats {
     text-align: center;
     color: #ECECE9;
-    width: 200px;
+    width: 250px;
     position: absolute;
     top: 98%;
     left: 50%;
@@ -195,7 +189,7 @@ button:hover {
     position: absolute;
     justify-content: center;
     transform: translate(-50%, -50%);
-    top:  55%;
+    top:  50%;
     left: 50%;
     border-radius: 10px;
     box-shadow: 0 6px 10px 0 rgba(236,236,233, 0.4), 0 8px 22px 0 rgba(0,121,145, 0.4);
@@ -208,9 +202,10 @@ button:hover {
     color:#ECECE9;
     padding: 10px 20px 10px 20px;
     background-color: #333232;
-    margin-bottom: 20px;
+    margin-bottom: 26px;
     border: 2px #ECECE9 solid;
     text-align: center; 
+    font-size: medium;
 
    }
 

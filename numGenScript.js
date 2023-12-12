@@ -25,11 +25,15 @@ window.onload = function () {
   let slotsNum8 = document.getElementById("slotsNum8");
   let slotsNum9 = document.getElementById("slotsNum9");
   let slotsNum10 = document.getElementById("slotsNum10");
+  
 
 
 
   const radio5Slots = document.getElementById('5slots');
   const radio10Slots = document.getElementById('10slots');
+
+
+
 
     radio5Slots.addEventListener('change', function () {
         if (radio5Slots.checked) {
@@ -40,7 +44,6 @@ window.onload = function () {
         }
     });
 
-    radio10Slots.dispatchEvent(new Event('change'));
 
     radio10Slots.addEventListener('change', function () {
       if (radio10Slots.checked) {
@@ -78,6 +81,10 @@ window.onload = function () {
           restartButtonOperation()
       }
   });
+
+  // keep this here, cannot move or issue with 10 slots auto winning will happen again
+  radio10Slots.dispatchEvent(new Event('change'));
+
 
   
 
@@ -247,7 +254,7 @@ function disableAllSlots() {
 
 }
 
-      let newRandomNumber = Math.floor(Math.random() * 1000) + 1;
+      let newRandomNumber = Math.floor(Math.random() * 10) + 1;
   
 
       if (holdingList.includes(newRandomNumber)){
