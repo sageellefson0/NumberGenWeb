@@ -35,6 +35,8 @@ window.onload = function () {
         if (radio5Slots.checked) {
             numList = ["0", "0", "0", "0", "0"];
             hideExtraSlotsAndNums();
+
+            restartButtonOperation()
         }
     });
 
@@ -70,6 +72,8 @@ window.onload = function () {
               slotsNum9.style.display = "inline-block";
               slotsNum10.style.display = "inline-block";
           }
+
+          restartButtonOperation()
       }
   });
   
@@ -155,7 +159,6 @@ window.onload = function () {
 // restartButton function
 function restartButtonOperation() {
   numberPlaceholder.innerHTML = "&nbsp;";
-    numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
     
     if (radio5Slots.checked) {
       numList = ["0", "0", "0", "0", "0"];
@@ -228,7 +231,7 @@ function disableAllSlots() {
       return;
   }
 
-      let newRandomNumber = Math.floor(Math.random() * 10) + 1;
+      let newRandomNumber = Math.floor(Math.random() * 1000) + 1;
   
 
       if (holdingList.includes(newRandomNumber)){
@@ -404,6 +407,9 @@ function disableAllSlots() {
 
   let happyManDivRight = document.getElementsByClassName("happyManDivRight")[0];
   let happyManDivLeft = document.getElementsByClassName("happyManDivLeft")[0];
+  let buffDogeDiv = document.getElementsByClassName("buffDogeDiv")[0];
+
+
 
   function orderCheck() {
     if (isInNumericalOrderIgnoreZeros(numList)) {
@@ -421,6 +427,10 @@ function disableAllSlots() {
               happyManDivLeft.style.display="none";
               canvas.style.display="block";
             }
+
+            if (radio5Slots.checked) {
+              buffDogeDiv.style.display = "none";
+          }
 
           
         } 
