@@ -19,7 +19,7 @@ window.onload = function () {
   let mobileNums2 = document.getElementsByClassName("mobileNums2")[0];
 
 
-  let inputBoxes = document.getElementById("inputBoxes");
+  let slotDiv = document.getElementById("slotDiv");
 
 
 
@@ -67,9 +67,9 @@ window.onload = function () {
             restartButtonOperation()
 
             if (window.innerWidth <= 768) {
-              inputBoxes.style.top="71%";
+              slotDiv.style.top="71%";
             }
-            
+
             mobileNums2.style.display="none";
         }
     });
@@ -78,7 +78,7 @@ window.onload = function () {
     radio10Slots.addEventListener('change', function () {
       if (radio10Slots.checked) {
           numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
-          inputBoxes.style.top="75%";
+          slotDiv.style.top="75%";
   
           // Check if the screen width is less than or equal to 768 pixels (mobile)
           if (window.innerWidth <= 768) {
