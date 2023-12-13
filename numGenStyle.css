@@ -165,6 +165,10 @@ button:disabled{
 
 }
 
+input[type=radio] {
+    accent-color: #007991 ;
+ }
+
 #numberPlaceholder{
     font-size: 20px;
     color: #ECECE9;

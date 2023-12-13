@@ -66,7 +66,10 @@ window.onload = function () {
 
             restartButtonOperation()
 
-            inputBoxes.style.top="71%";
+            if (window.innerWidth <= 768) {
+              inputBoxes.style.top="71%";
+            }
+            
             mobileNums2.style.display="none";
         }
     });
