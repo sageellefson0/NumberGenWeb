@@ -292,6 +292,16 @@ canvas {
 }
 
 
+.mobileNums1
+{
+    display: none;
+}
+
+.mobileNums2
+{
+    display: none;
+}
+
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
@@ -350,9 +360,39 @@ canvas {
         width: 50px; /* Adjusted width for mobile */
         margin-left: 5px; /* Adjusted margin for mobile */
         margin-right: 5px; /* Adjusted margin for mobile */
-        margin-bottom: 5px;
+        margin-bottom: 20px;
     }
 
+    .mobileNums1
+    {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top:  72%;
+        left: 50%;
+        display: flex; 
+        justify-content: center; 
+
+       
+    }
+
+    .mobileNums2
+    {   position: absolute;
+        transform: translate(-50%, -50%);
+        top:  82%;
+        left: 50%;
+        display: flex; 
+        justify-content: center; 
+       
+    }
+
+    .slotsNumMobile{
+        display: inline-block;
+        font-family: Verdana, Geneva, sans-serif;
+        color: #ECECE9;
+        width: 50px;
+        margin: 0 7px;
+        text-align: center; 
+        }
 
 
 

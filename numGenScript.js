@@ -16,6 +16,8 @@ window.onload = function () {
   let happyManDivRight = document.getElementsByClassName("happyManDivRight")[0];
   let happyManDivLeft = document.getElementsByClassName("happyManDivLeft")[0];
   let buffDogeDiv = document.getElementsByClassName("buffDogeDiv")[0];
+  let mobileNums2 = document.getElementsByClassName("mobileNums2")[0];
+
 
   let inputBoxes = document.getElementById("inputBoxes");
 
@@ -64,7 +66,8 @@ window.onload = function () {
 
             restartButtonOperation()
 
-            inputBoxes.style.top="72%";
+            inputBoxes.style.top="71%";
+            mobileNums2.style.display="none";
         }
     });
 
@@ -87,6 +90,9 @@ window.onload = function () {
             slot8.style.display = "initial";
             slot9.style.display = "initial";
             slot10.style.display = "initial";
+
+            mobileNums2.style.display="flex";
+
 
           } else {
               // If not on mobile, show slots 6-10
