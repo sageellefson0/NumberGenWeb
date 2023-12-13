@@ -308,10 +308,11 @@ canvas {
     #welcomeText {
         padding: 20px;   
         font-size:x-large; 
+        top: 20%;
     }
 
     #buttonDiv {
-        top: 52%; /* Adjust button position */
+        top: 51%; /* Adjust button position */
         margin: 0; 
     }
 
@@ -323,7 +324,7 @@ canvas {
     }
 
     #howToPlay {
-        top: 38%; /* Adjust howToPlay button position */
+        top: 36%; /* Adjust howToPlay button position */
     }
 
     .stats {
@@ -335,7 +336,7 @@ canvas {
     }
 
     .radioButtons {
-        top: 43%; /* Adjust radioButtons position */
+        top: 42%; /* Adjust radioButtons position */
     }
 
     #howToPlayPopUp {
