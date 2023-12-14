@@ -154,9 +154,9 @@ window.onload = function () {
     generateButton.disabled = true;
     restartButton.disabled = false;
     enableAllSlots();
-  
 
-
+    radio10Slots.disabled=true;
+    radio5Slots.disabled=true;
   });
 
   closePopUpBtn.addEventListener("click", function () {
