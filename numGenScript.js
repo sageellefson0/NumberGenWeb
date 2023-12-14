@@ -205,6 +205,9 @@ function restartButtonOperation() {
       numList = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
   }
 
+  radio10Slots.disabled=false;
+  radio5Slots.disabled=false;
+
     holdingList = []; 
 
 
@@ -277,7 +280,7 @@ function disableAllSlots() {
 
 }
 
-      let newRandomNumber = Math.floor(Math.random() * 10) + 1;
+      let newRandomNumber = Math.floor(Math.random() * 1000) + 1;
   
 
       if (holdingList.includes(newRandomNumber)){
@@ -463,6 +466,7 @@ function disableAllSlots() {
             statsTextWin.innerText = "Wins: " + winVar;
             celebration.style.display="block";   
             canvas.style.display="block";
+       
 
             if (window.innerWidth <= 768) {
               happyManDivRight.style.display="none";
@@ -473,6 +477,9 @@ function disableAllSlots() {
             if (radio5Slots.checked) {
               buffDogeDiv.style.display = "none";
           }
+
+          radio10Slots.disabled=true;
+          radio5Slots.disabled=true;
 
           
         } 
