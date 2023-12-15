@@ -39,11 +39,12 @@ window.onload = function () {
   
 
 
-
+// Retrieves elements by radio button ID and assigns them to radio button variables
   const radio5Slots = document.getElementById('5slots');
   const radio10Slots = document.getElementById('10slots');
 
 
+// Retrieves elements by slot ID and assigns them to slot variables
   const slot1 = document.getElementById("slot1");
   const slot2 = document.getElementById("slot2");
   const slot3 = document.getElementById("slot3");
@@ -55,6 +56,8 @@ window.onload = function () {
   const slot9 = document.getElementById("slot9");
   const slot10 = document.getElementById("slot10");
 
+
+// Retrieves generate button from document and assigns it to a variable
   const generateButton = document.getElementById("generateButton");
 
 
