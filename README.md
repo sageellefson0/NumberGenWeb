@@ -6,6 +6,7 @@ This game may eventually be converted to a Java application - but is currently a
 # Try to win on 10 slots for a awesome winning surprise! ;) 
 
 How to Play:
+
 • The object of the game is to place 5 or 10 numbers, between 1 - 1000 in the correct sequential order.
 
 • To start the game, press the "Generate Start Number" button and get your first number.
