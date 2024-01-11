@@ -1,4 +1,4 @@
-# Digit Disorder 
+# Digit Disorder - Version 1.0
 
 Welcome to the repo for a fun little web game I worked on in my spare time. 
 This game may eventually be converted to a Java application - but is currently available for play at: https://sageellefson.com/indexNumberGen.html
