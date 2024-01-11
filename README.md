@@ -3,7 +3,7 @@
 Welcome to the repo for a fun little web game I worked on in my spare time. 
 This game may eventually be converted to a Java application - but is currently available for play at: https://sageellefson.com/indexNumberGen.html
 
-# Try to win on 10 slots for a awesome winning surprise! ;) 
+# Try to win on 10 slots for an awesome surprise! ;) 
 
 How to Play:
 
