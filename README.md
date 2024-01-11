@@ -17,3 +17,9 @@ How to Play:
 
 • If all numbers are placed in the correct sequential order, a win will be added to your win tally.
 
+
+
+Future enhancements: 
+
+- Correct slot numbering on tablet views
+- Additional game modes
