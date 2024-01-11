@@ -101,6 +101,7 @@ html {
     box-shadow: 0 6px 10px 0 rgba(236, 236, 233, 0.4), 0 8px 22px 0 rgba(0, 121, 145, 0.4);
     text-align: center;
     border: solid 2px #007991;
+    z-index: 11;
 }
 
 /* Button for closing the how to play pop up. */
@@ -141,7 +142,8 @@ html {
 #howToPlay,
 .slotsNum,
 #howToPlayPopUp,
-.radioButtons {
+.radioButtons,
+#closePopUpBtn {
     font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -357,6 +359,10 @@ canvas {
         margin: 0;
     }
 
+    .stats {
+        margin-top: 5px;
+    }
+
     #howToPlay {
         top: 36%;
     }
@@ -366,7 +372,7 @@ canvas {
     }
 
     #slotDiv {
-        top: 75%;
+        width: 350px;
     }
 
     .radioButtons {
@@ -377,6 +383,9 @@ canvas {
         width: 90%;
         max-width: 90%;
         top: 50%;
+        background-color: rgba(51, 50, 50, 1);
+        height: auto;    
+        font-size: medium;
     }
 
     .buffDogeDiv {
@@ -395,22 +404,23 @@ canvas {
         width: 50px;
         margin-left: 5px;
         margin-right: 5px;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     .mobileNums1 {
         position: absolute;
         transform: translate(-50%, -50%);
-        top: 72%;
+        top: 71%;
         left: 50%;
         display: flex;
         justify-content: center;
+        margin-bottom: 5px;
     }
 
     .mobileNums2 {
         position: absolute;
         transform: translate(-50%, -50%);
-        top: 82%;
+        top: 81%;
         left: 50%;
         display: flex;
         justify-content: center;
@@ -425,4 +435,50 @@ canvas {
         text-align: center;
     }
 
+    #restartButton {
+        font-size: medium;
+    }
+
 }
+    /**************************** Tablet specific ******************************/
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+        
+        #slotDiv {
+            top: 75%;
+            width: 650px;
+        }
+
+        .slots {
+            width: 50px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 20px;
+        }
+
+
+        #slotDiv {
+            top: 60%;
+        }
+
+        #howToPlayPopUp {
+            background-color: rgba(51, 50, 50, 1);
+            height: auto;    
+            font-size: medium;
+        }
+        
+        .slotsNum{
+            display: none;
+        }
+
+        .mobileNums1 {
+            display: none;
+        }
+    
+        .mobileNums2 {
+            display: none;
+        }
+     
+
+    }
+
